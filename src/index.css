@@ -1,13 +1,113 @@
-body {
+/* Global reset for all elements */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Global styles for the body */
+body {
+  /* Font family stack: 'Outfit', followed by fallback fonts */
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased; /* Improve font rendering in WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improve font rendering in macOS Firefox */
+}
+
+
+/* Paragraph styling */
+p {
+  font-size: 1.6rem; /* Font size for paragraphs */
+}
+
+/* Heading 1 styling */
+h1 {
+  font-size: 6rem; /* Font size for heading 1 */
+}
+
+/* Styling for the app container */
+.app {
+  width: 100%;
+  height: 100vh;
+  /* Background: a linear gradient from 90% black to 20% black, and an image 'back.jpg' centered and covering the background */
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url('./imgs/back.jpg') no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #fff; /* Text color for the container content */
+}
+
+/* Styling for the search bar */
+.searchbar {
+  text-align: center;
+  padding: 1rem; /* Padding around the search bar */
+}
+
+/* Styling for input elements */
+input {
+  padding: .7rem 1.5rem; /* Vertical and horizontal padding for inputs */
+  font-size: 1.2rem; /* Font size for input text */
+  border-radius: 25px; /* Border radius for rounded corners */
+  border: 1px solid white; /* Border color for the input */
+  background: rgba(255,255,255, 0.1); /* Background color with 10% opacity */
+  color: #f8f8f8; /* Text color for inputs */
+}
+
+/* Styling for the container */
+.container {
+  max-width: 700px; /* Maximum width of the container */
+  height: 700px; /* Height of the container */
+  margin: auto; /* Center the container horizontally */
+  padding: 0 1rem; /* Padding on the left and right sides of the container */
+  position: relative; /* Position the container relatively */
+  top: 10%; /* Distance from the top of the viewport */
+  display: flex; /* Flex layout for container's children */
+  flex-direction: column; /* Stack the children in a column */
+  justify-content: space-between; /* Space between container's children */
+}
+
+/* Styling for the top section */
+.top {
+  width: 100%; /* Full width of the top section */
+  margin: 1rem auto; /* Margin on the top and bottom of the top section */
+}
+
+/* Styling for the description element */
+.description {
+  position: relative; /* Position the element relatively */
+  right: -90%; /* Move the element to the left by 90% of its width */
+  transform-origin: 0 0; /* Set the origin point for transform */
+  transform: rotate(269deg); /* Rotate the element 269 degrees (almost vertical) */
+}
+
+/* Styling for the bottom section */
+.bottom {
+  display: flex; /* Flex layout for the bottom section's children */
+  justify-content: space-evenly; /* Space evenly between the children */
+  text-align: center; /* Center the text inside the bottom section */
+  width: 100%; /* Full width of the bottom section */
+  margin: 1rem auto; /* Margin on the top and bottom of the bottom section */
+  padding: 1rem; /* Padding around the bottom section */
+  border-radius: 12px; /* Border radius for rounded corners */
+  background-color: rgba(255,255,255, 0.2); /* Background color with 20% opacity */
+}
+
+/* Styling for bold text */
+.bold {
+  font-weight: 700; /* Set font weight to bold (700) */
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  h1 {
+    font-size: 3.5rem; /* Reduce the font size of heading 1 */
+  }
+
+  .container {
+    height: auto; /* Change the container's height to auto for flexible height */
+  }
+  .app{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url('./imgs/back1.jpg') no-repeat center center/cover;
+  }
 }
