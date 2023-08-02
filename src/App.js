@@ -29,6 +29,9 @@ function App() {
 
   return (
     <div className="app">
+
+
+    
       {/* JSX code to render a search bar (a div with class 'searchbar') with an input element */}
       <div className="searchbar">
         {/* Input element */}
@@ -45,6 +48,8 @@ function App() {
           type="text"
         />
       </div>
+
+
       <div className="container">
         <div className="top">
           <div className="location">
