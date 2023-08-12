@@ -12,6 +12,12 @@ function App() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
 
   // Function to search for weather data when the user presses the 'Enter' key
+
+
+
+// last last
+
+
   const searchLocation = (event) => {
     // Check if the 'Enter' key is pressed
     if (event.key === "Enter") {
@@ -20,7 +26,6 @@ function App() {
         // Update the state 'data' with the received API response data
         setData(response.data);
         // Log the API response data to the console for debugging purposes
-        console.log(response.data);
       });
       // Clear the 'location' state after the API call
       setLocation("");
@@ -29,9 +34,6 @@ function App() {
 
   return (
     <div className="app">
-
-
-    
       {/* JSX code to render a search bar (a div with class 'searchbar') with an input element */}
       <div className="searchbar">
         {/* Input element */}
